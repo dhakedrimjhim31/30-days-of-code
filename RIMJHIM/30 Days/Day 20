@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class student
+{
+private:
+int *marks;
+int N;
+public:
+void getData(int n); 
+void displayData(); 
+    
+};
+void student::getData(int n)
+{
+   N=n;
+    marks=new int[N];
+    cout<<"Enter the marks: "<<endl;
+    for(int i=0;i<N;i++)
+    cin>>marks[i];
+
+}
+void student::displayData()
+{
+ int sum=0; 
+ cout<<" Entered marks are ="<<endl;
+for(int i=0;i<N;i++)
+ {    cout<<marks[i]<<endl;
+      sum+=marks[i];
+ }
+  cout<<"sum="<<sum<<endl;
+  } 
+int main()
+{
+    student a;
+     a.getData(3);
+     a.displayData();
+    return 0;
+}
+
+
